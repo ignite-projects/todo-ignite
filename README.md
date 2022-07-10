@@ -1,84 +1,67 @@
-# Desafio 01 - Conceitos do React
+<p align="center">Ignite Challenge</p>
+<h1 align="center"> 
+	to.do
+</h1>
 
-## 💻 Sobre o desafio
+<div aling="center" id="top">
 
-Nesse desafio, você deverá criar uma aplicação para treinar o que aprendeu até agora no ReactJS
-Essa será uma aplicação onde o seu principal objetivo é uma pequena aplicação de atividades a fazer, para treinar um pouco mais sobre manipulação do estado no React.
+  <p align="center">  
+    <img alt="Version" src="https://img.shields.io/github/v/tag/ignite-projects/todo-ignite">
+    <img alt="Stars" src="https://img.shields.io/github/stars/ignite-projects/todo-ignite">    
+    <img alt="Issues" src="https://img.shields.io/github/issues/ignite-projects/todo-ignite?logoColor=1DA1F2">  
+  </p>
 
-- Adicionar uma nova tarefa
-- Remover uma tarefa
-- Marcar e desmarcar uma tarefa como concluída
+  <p align="center">
+    <a href="#about">About</a> &#xa0; | &#xa0;
+    <a href="#technologies">Technologies</a> &#xa0; | &#xa0;
+    <a href="#requirements">Requirements</a> &#xa0; | &#xa0;
+    <a href="#installation">Installation</a> &#xa0;
+  </p>
+</div>
 
-A seguir veremos com mais detalhes o que e como precisa ser feito 🚀
+<p align="center">
+  <img alt="project cover" src=".github/images/screen-home-todo-ignite.png">
+</p>
 
-## Template da aplicação
+## About
 
-Para realizar esse desafio, criamos para você esse modelo que você deve utilizar como um template do GitHub.
+Small to-do web app developed using react.js.
 
-O template está disponível na seguinte URL:
-https://github.com/rocketseat-education/ignite-template-reactjs-conceitos-do-react
+## Technologies
 
-Dica: Caso não saiba utilizar repositórios do GitHub como template, temos um guia em [nosso FAQ](https://www.notion.so/FAQ-Desafios-ddd8fcdf2339436a816a0d9e45767664).
+- React.Js
+- TypeScript
+- Scss
 
-## O que devo editar na aplicação?
+## Requirements
 
-Com o template já clonado, as depêndencias instaladas, você deve completar onde não possui código com o código para atingir os objetivos de cada teste. Nesse desafio, você deve editar apenas o seguinte arquivo para completar as funcionalidades da aplicação:
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/)
 
-- [src/components/TaskList.tsx;](https://github.com/rocketseat-education/ignite-template-reactjs-conceitos-do-react/blob/main/src/components/TaskList.tsx)
+## Installation
 
-## components/TaskList.tsx
+To make it run on your machine, follow the steps below
 
-Esse é o componente responsável por todas as funcionalidades da aplicação, é um componente simples, mas onde botaremos em prática várias partes da manipulação do estado.
+```bash
+# Clone the repository in some folder on your machine
+$ git clone git@github.com:ignite-projects/todo-ignite.git
 
-Você deve criar as funcionalidades para as três funções presentes nesse arquivo, que são:
+# Enter the repository
+$ cd todo-ignite
 
-- **handleCreateNewTask:** Deve ser possível adicionar uma nova task no estado de `tasks`, com os campos `id` que deve ser gerado de forma aleatória, `title` que deve ser um texto e `isComplete` que deve iniciar como false.
-- **handleToggleTaskCompletion:** Deve alterar o status de `isComplete` para uma task com um ID específico que é recebido por parâmetro.
-- **handleToggleTaskCompletion:** Deve alterar o status de isComplete para uma task com um ID específico que é recebido por parâmetro.
+# Install the dependencies by typing in the terminal
+$ yarn install
 
-## Especificação dos testes
-
-Em cada teste, tem uma breve descrição no que sua aplicação deve cumprir para que o teste passe.
-
-> 💡Caso você tenha dúvidas quanto ao que são os testes, e como interpretá-los, dê uma olhada em [nosso FAQ](https://www.notion.so/FAQ-Desafios-ddd8fcdf2339436a816a0d9e45767664)
-
-Para esse desafio, temos os seguintes testes:
-
-## Teste TaskList.spec.tsx
-
-- should be able to add a task
-  Para que esse teste passe, você deve permitir que task seja criada e com isso, exibida em tela. As taks criadas devem conter os atributos seguindo o padrão da interface, que é:
-
-```ts
-interface Task {
-  id: number;
-  title: string;
-  isComplete: boolean;
-}
+# Run the application
+$ yarn dev
 ```
 
-- should not be able to add a task with an empty title
+<div align="right">
+Connect with me
 
-Para que esse teste passe, antes de criar uma nova task, você deve validar se algo foi digitado no input e não permitir a criação da task caso o valor seja vazio, caso o valor digitado seja vazio, você deve impedir a criação da task.
+[![Linkedin Badge](https://img.shields.io/badge/-Robson%20Natanael-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/robsonnatanael)](https://www.linkedin.com/in/robsonnatanael)
+[![Twitter Badge](https://img.shields.io/badge/-@robsonnatanael-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/robsonnatanael)](https://twitter.com/robsonnatanael)
+[![Rocketseat](https://img.shields.io/badge/-Rocketseat%20Profile-8358e1?style=flat-square&labelColor=8358e1&logoColor=white&link=https://app.rocketseat.com.br/me/robsonnatanael)](https://app.rocketseat.com.br/me/robsonnatanael)
 
-- should be able to remove a task
-
-Para que esse teste passe, antes de criar uma nova task, você deve validar se algo foi digitado no input e não permitir a criação da task caso o valor seja vazio, caso o valor digitado seja vazio, você deve impedir a criação da task.
-
-- should be able to remove a task
-
-Para que esse teste passe, você deve permitir que ao clicar no botão com ícone de uma lixeira, a task relacionada a esse botão seja removida do estado da aplicação, consequentemente sendo removida da tela.
-
-- should be able to check a task
-
-Para que esse teste passe, você deve permitir que ao clicar no checkbox ao lado da task, ela seja marcada como concluída ou não concluída de acordo com seu estado atual, alterando seu valor de `isComplete` de `false` para `true` ou ao contrário, de `true` para `false`.
-
-## Como deve ficar a aplicação ao final?
-
-Está com dúvidas (ou curioso 👀) para ver como deve ficar a aplicação ao final do desafio? Deixamos abaixo um vídeo mostrando as principais funcionalidades que você deve implementar para te ajudar (ou matar sua curiosidade 👀).
-
-## 📅 Entrega
-
-Esse desafio deve ser entregue a partir da plataforma da Rocketseat. Envie o link do repositório que você fez suas alterações. Após concluir o desafio, além de ter mandado o código para o GitHub, fazer um post no Linkedin é uma boa forma de demonstrar seus conhecimentos e esforços para evoluir na sua carreira para oportunidades futuras.
-
-Link oficial do [desafio](https://www.notion.so/Desafio-01-Conceitos-do-React-51e4099a6e2f4d4bae94f9fe75bb769d).
+</div>
